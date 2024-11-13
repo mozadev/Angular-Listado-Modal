@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AnexosRoutingModule } from './anexos-routing.module';
 import { ListPageComponent } from './pages/list-page/list-page.component';
+import { MaterialModule } from './material/material.module';
 
 
 
@@ -12,7 +13,8 @@ import { ListPageComponent } from './pages/list-page/list-page.component';
   ],
   imports: [
     CommonModule,
-    AnexosRoutingModule
+    AnexosRoutingModule,
+    MaterialModule,
   ]
 })
 export class AnexosModule { }
