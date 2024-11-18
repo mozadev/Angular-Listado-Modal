@@ -1,4 +1,4 @@
-#HeroesApp
+
 
 <h1> Instalacion</h1>
 
