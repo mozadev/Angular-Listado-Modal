@@ -1,6 +1,41 @@
 
 
-<h1> Instalacion</h1>
+<h1> 🌟 Estructura</h1>
+
+```
+src/
+├── app/
+│   ├── anexos/                  
+│   │   ├── interfaces/
+│   │   │   ├── anexo.interface.ts
+│   │   │   └── anexoDetail.interface.ts
+│   │   ├── pages/
+│   │   │   ├── anexo-detail/   
+│   │   │   └── list-page/      
+│   │   ├── services/
+│   │   │   └── anexos.service.ts
+│   │   ├── anexos-routing.module.ts
+│   │   └── anexos.module.ts
+│   ├── material/                
+│   │   └── material.module.ts
+│   ├── shared/                  
+│   │   ├── pages/
+│   │   │   └── error404-page/
+│   │   └── shared.module.ts
+│   ├── app-routing.module.ts
+│   ├── app.component.ts
+│   └── app.module.ts
+├── assets/
+├── environments/
+└── styles.css
+
+```
+
+
+
+
+
+<h1> 🎨 Instalacion</h1>
 
 1. Clonar el proyecto
 
@@ -33,7 +68,7 @@ export const environments = {
 
 ```
 
-<h1>Ejecución</h1>
+<h1> 🏗 Ejecución</h1>
 Para ejecutar la aplicacion desde la linea de comandos 
 
  ```
