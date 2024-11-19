@@ -1,52 +1,60 @@
-h1{
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 16px;
+/* Header Styles */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
 
-.total-section {
-    display: flex;
-    justify-content: space-around;
-    margin: 16px 0;
+/* Totals Section */
+.totals-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 16px 0;
 }
 
 .total-card, .summary-card {
-    background-color: #f5f5f5;
-    padding: 16px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-
+  background-color: #f5f5f5;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-    width: 50px;
-    margin-bottom: 8px;
+  width: 50px;
+  margin-bottom: 8px;
 }
 
-.total-card h2 .summary-card h2 {
-    font-size: 24px;
-    color: #007bff;
+.total-card h2, .summary-card h2 {
+  font-size: 24px;
+  color: #007bff;
 }
 
+/* Styled Table */
 .styled-table {
-    width: 100%;
-    margin-top: 16px;
-    border: 1px solid #ddd;
-    border-collapse: collapse;
+  width: 100%;
+  margin-top: 16px;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+
+.styled-table th, .styled-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
 .styled-table th {
-    background-color: #007bff;
-    color: #ffffff;
-    font-weight: bold;
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: bold;
 }
 
-.style-table td button{
-    color: #ffffff;
-    font-weight: bold;
+.styled-table td button {
+  color: #ffffff;
+  font-weight: bold;
 }
 
-.style-table tr:hover {
-    background-color: #f1f1f1;
+.styled-table tr:hover {
+  background-color: #f1f1f1;
 }
