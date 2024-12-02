@@ -3,11 +3,12 @@ import { Anexo } from '../../interfaces/anexo.interface';
 import { AnexosService } from '../../services/anexos.service';
 import { MatDialog } from '@angular/material/dialog';
 import { AnexoDetailComponent } from '../anexo-detail/anexo-detail.component';
+import { MatTableModule } from '@angular/material/table';
 
 @Component({
   selector: 'app-list-page',
-  templateUrl: './list-page.component.html',
-  styleUrls: ['./list-page.component.css']
+  styleUrls: ['./list-page.component.css'],
+  templateUrl: './list-page.component.html'
 })
 export class ListPageComponent implements OnInit {
   public anexos: Anexo[] = [];

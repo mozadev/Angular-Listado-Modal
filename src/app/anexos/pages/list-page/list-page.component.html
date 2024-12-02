@@ -1,50 +1,64 @@
-<h1>Listado de Anexos MINPU</h1>
+<mat-toolbar>
+  <span>Anexos - MINPUB</span>
+</mat-toolbar>
+
 <mat-divider></mat-divider>
 
-<div class="total-section">
-  <div class="total-card">
-    <img src="../../../../assets/claro.png" alt="Claro" class="logo" />
-    <p>Anexos en UP inicialmente</p>
-    <h2>Total: {{ count }}</h2>
-  </div>
-
-  <div class="summary-card">
-    <h2>Resumen de Anexos Actualmente</h2>
-    <p>UP: {{ up }} – {{ upRate }}%</p>
-    <p>DOWN: {{ dow }} – {{ dowRate }}%</p>
-  </div>
+<div class="logo-container">
+  <img src="../../../../assets/claro.png" alt="Claro" class="main-logo" />
+  <img src="../../../../assets/minpub.png" alt="MinPub" class="main-logo" />
 </div>
 
-<table mat-table [dataSource]="anexos" class="mat-elevation-z8 style-table">
-  <ng-container matColumnDef="key">
-    <th mat-header-cell *matHeaderCellDef>Key</th>
-    <td mat-cell *matCellDef="let anexo">{{ anexo.key__key }}</td>
-  </ng-container>
+<mat-divider></mat-divider>
 
-  <ng-container matColumnDef="anexo">
-    <th mat-header-cell *matHeaderCellDef>Anexo</th>
-    <td mat-cell *matCellDef="let anexo">{{ anexo.key__anexo }}</td>
-  </ng-container>
+<div class="container">
 
-  <ng-container matColumnDef="duration">
-    <th mat-header-cell *matHeaderCellDef>Duracion de la Caída</th>
-    <td mat-cell *matCellDef="let anexo">{{ anexo.duration_hrs }}</td>
-  </ng-container>
+  <div class="total-section">
+    <div class="total-card">
+      <p>Anexos en UP inicialmente</p>
+      <h2>TOTAL: {{ count }}</h2> 
+    </div>
+  
+    <div class="summary-card">
+      <h2>Resumen de Anexos Actualmente</h2>
+      <p>UP: {{ up }} – {{ upRate }}%</p>
+      <p>DOWN: {{ dow }} – {{ dowRate }}%</p>
+    </div>
+  </div>
+  
+  <table mat-table [dataSource]="anexos" class="mat-elevation-z8 style-table">
+    <ng-container matColumnDef="key">
+      <th mat-header-cell *matHeaderCellDef>Key</th>
+      <td mat-cell *matCellDef="let anexo">{{ anexo.key__key }}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="anexo">
+      <th mat-header-cell *matHeaderCellDef>Anexo</th>
+      <td mat-cell *matCellDef="let anexo">{{ anexo.key__anexo }}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="duration">
+      <th mat-header-cell *matHeaderCellDef>Duracion de la Caída</th>
+      <td mat-cell *matCellDef="let anexo">{{ anexo.duration_hrs }}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="registro">
+      <th mat-header-cell *matHeaderCellDef>Registro</th>
+      <td mat-cell *matCellDef="let anexo">{{ anexo.registro | date: 'dd MMM yyyy, HH:mm' }}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="details">
+      <th mat-header-cell *matHeaderCellDef>Detalles</th>
+      <td mat-cell *matCellDef="let anexo">
+        <button mat-raised-button color="primary" (click)="openDetailDialog(anexo.key__key)">
+          Ver {{ anexo.key__key }}
+        </button>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="['key', 'anexo', 'duration', 'registro', 'details']"></tr> 
+   <tr mat-row *matRowDef="let row; columns: ['key', 'anexo', 'duration', 'registro', 'details'];"></tr> 
+  </table>
+  
+</div>
 
-  <ng-container matColumnDef="registro">
-    <th mat-header-cell *matHeaderCellDef>Registro</th>
-    <td mat-cell *matCellDef="let anexo">{{ anexo.registro | date: 'dd MMM yyyy, HH:mm' }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="details">
-    <th mat-header-cell *matHeaderCellDef>Detalles</th>
-    <td mat-cell *matCellDef="let anexo">
-      <button mat-raised-button color="primary" (click)="openDetailDialog(anexo.key__key)">
-        Ver {{ anexo.key__key }}
-      </button>
-    </td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>

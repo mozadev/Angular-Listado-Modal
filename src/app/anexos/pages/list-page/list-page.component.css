@@ -1,60 +1,115 @@
-/* Header Styles */
-h1 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 16px;
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Totals Section */
-.totals-section {
+mat-toolbar {
+  background-color: #1976d2;
+  color: #f5f5f5;
+}
+
+mat-divider {
+  margin: 10px 0;
+}
+
+.logo-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; 
+  margin-bottom: 20px;
+}
+
+.main-logo {
+  width: 150px; 
+  height: auto;
+  object-fit: contain; 
+}
+
+.container {
+  max-width: 800px; 
+  margin: 0 auto;
+}
+
+
+.total-section {
+  display: flex;
+  gap: 80px;
   justify-content: space-around;
-  margin: 16px 0;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.total-card, .summary-card {
-  background-color: #f5f5f5;
-  padding: 16px;
+.total-card,
+.summary-card {
+  width: 48%; 
+  text-align: center;
+  background-color: #f5f5f5; 
+  padding: 15px;
   border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-.logo {
-  width: 50px;
-  margin-bottom: 8px;
+table {
+  width: 100%; 
+  border-collapse: collapse; 
 }
 
-.total-card h2, .summary-card h2 {
-  font-size: 24px;
-  color: #007bff;
+
+.style-table {
+  width: 100%; 
+  border-spacing: 0; 
+  border-collapse: collapse; 
 }
 
-/* Styled Table */
-.styled-table {
-  width: 100%;
-  margin-top: 16px;
-  border: 1px solid #ddd;
-  border-collapse: collapse;
+td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px ;
 }
 
-.styled-table th, .styled-table td {
-  padding: 12px;
-  border: 1px solid #ddd;
-  text-align: center;
-}
-
-.styled-table th {
-  background-color: #007bff;
-  color: #ffffff;
+.style-table th.mat-header-cell {
+  background-color: #1976d2 !important; 
+  color: white !important; 
   font-weight: bold;
+  text-align: center; 
+  font-size: 16px;
+  padding: 10px;
+  border-bottom: 2px solid #0056b3; 
 }
 
-.styled-table td button {
-  color: #ffffff;
-  font-weight: bold;
+.style-table td.mat-cell {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
 }
 
-.styled-table tr:hover {
-  background-color: #f1f1f1;
+
+.mat-header-row {
+  background-color: #1976d2 !important;
 }
+
+
+.total-card h2 {
+  color: #28a745;
+  margin: 5px 0;
+}
+
+.summary-card h2 {
+  color: #ffc107;
+  margin: 5px 0;
+}
+
+.summary-card p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+button {
+  font-size: 12px;
+}
+
+
