@@ -1,8 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { ActivatedRoute } from '@angular/router';
-import { environments } from 'src/environments/environments';
 import { AnexoDetail } from '../../interfaces/anexoDetail.interface';
 
 interface AnexoDetailData{

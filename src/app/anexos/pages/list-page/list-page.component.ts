@@ -3,7 +3,7 @@ import { Anexo } from '../../interfaces/anexo.interface';
 import { AnexosService } from '../../services/anexos.service';
 import { MatDialog } from '@angular/material/dialog';
 import { AnexoDetailComponent } from '../anexo-detail/anexo-detail.component';
-import { MatTableModule } from '@angular/material/table';
+
 
 @Component({
   selector: 'app-list-page',
@@ -20,7 +20,11 @@ export class ListPageComponent implements OnInit {
 
   displayedColumns: string[] = ['key', 'anexo', 'duration', 'registro', 'details'];
 
-  constructor(private anexosService: AnexosService, private dialog: MatDialog) {}
+  constructor(
+    private anexosService: AnexosService,
+    private dialog: MatDialog
+  ) 
+  {}
 
   ngOnInit(): void {
     this.anexosService.getAnexos().subscribe(data => {
