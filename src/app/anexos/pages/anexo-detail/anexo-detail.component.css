@@ -1,58 +1,111 @@
-/* Estilo para el título */
+/* Container principal del modal */
+:host {
+  display: block;
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Título del modal */
 .anexo-title {
-    text-align: center;
-    font-size: 24px;
-    color: #1976d2;
-    font-weight: bold;
-    margin-bottom: 10px;
+  text-align: center;
+  font-size: 24px;
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+/* Info de duración */
+.duration-info {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 24px;
+
+  strong {
+    color: #007bff;
+    font-weight: 600;
+  }
+}
+
+/* Contenedor de la tabla */
+.anexo-container {
+  padding: 0 20px;
+  margin: 20px 0;
+}
+
+/* Estilos de la tabla */
+.style-table {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Cabecera de la tabla */
+::ng-deep .mat-mdc-header-cell {
+  background-color: rgba(0, 123, 255, 0.85) !important;
+  color: white !important;
+  font-weight: 500 !important;
+  padding: 16px !important;
+  font-size: 14px !important;
+  text-align: center !important;
+  border-bottom: none !important;
+}
+
+/* Celdas de la tabla */
+::ng-deep .mat-mdc-cell {
+  padding: 12px 16px !important;
+  text-align: center !important;
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* Filas de la tabla */
+::ng-deep .mat-mdc-row {
+  &:hover {
+    background-color: rgba(0, 123, 255, 0.04);
   }
 
-  .duration-info {
-    text-align: center;
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 20px;
+  &:nth-child(even) {
+    background-color: #f8f9fa;
   }
-  
+}
 
-  .anexo-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px auto;
-    max-width: 900px;
-  }
-  
+/* Iconos de estado */
+.status-icon {
+  font-size: 20px;
+  vertical-align: middle;
 
-  .style-table {
-    width: 100%;
-    border-spacing: 0;
-    border-collapse: collapse;
+  &[color="warn"] {
+    color: #dc3545;
   }
-  
-  table.mat-elevation-z8 th.mat-header-cell {
-    background-color: #1976d2; 
-    color: white; 
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  table.mat-elevation-z8 td.mat-cell {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ccc;
-  }
-  
 
-  .status-icon {
-    font-size: 18px;
-    vertical-align: middle;
+  &[color="primary"] {
+    color: #28a745;
   }
-  
+}
 
-  .button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+/* Contenedor del botón */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 0 20px;
+}
+
+/* Botón de cerrar */
+button.mat-button {
+  min-width: 120px;
+  padding: 8px 16px;
+  border-radius: 4px;
+
+  &[color="warn"] {
+    background-color: #dc3545;
+    color: white;
+
+    &:hover {
+      background-color: darken(#dc3545, 10%);
+    }
   }
-  
+}
