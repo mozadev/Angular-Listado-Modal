@@ -1,6 +1,6 @@
 
 
-<h1> 🌟 Estructura</h1>
+<h1> 🌟 Estructura </h1>
 
 ```
 src/

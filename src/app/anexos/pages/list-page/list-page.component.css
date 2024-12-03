@@ -1,4 +1,4 @@
-/* Base Styles */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -67,11 +67,21 @@ mat-divider {
 }
 
 /* Card Typography */
-.total-card h2 {
-  color: #3f51b5;
-  margin: 0 0 8px 0;
+.total-card{
+  h2 {
+   color: #3f51b5;
+   margin: 0 0 8px 0;
+   font-size: 20px;
+   font-weight: 500;
+ }
+
+ p {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 8px 0;
   font-size: 20px;
-  font-weight: 500;
+}
+
+
 }
 
 .summary-card {
@@ -85,7 +95,7 @@ mat-divider {
   p {
     color: rgba(0, 0, 0, 0.87);
     margin: 8px 0;
-    font-size: 14px;
+    font-size: 20px;
   }
 }
 
