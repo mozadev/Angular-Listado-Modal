@@ -12,6 +12,7 @@ interface AnexoDetailData{
   templateUrl: './anexo-detail.component.html',
   styleUrls: ['./anexo-detail.component.css']
 })
+
 export class AnexoDetailComponent implements OnInit {
  // displayedColumns: string[] = ['index', 'registro', 'status'];
 

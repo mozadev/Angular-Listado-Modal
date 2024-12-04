@@ -25,7 +25,6 @@ export class AnexosService {
 
   constructor(private http: HttpClient) { }
 
-
   private createAuthHeaders(): HttpHeaders {
     const username = environments.apiUsername;
     const password = environments.apiPassword;
@@ -35,7 +34,6 @@ export class AnexosService {
       'Authorization': `Basic ${authToken}`
     });
   }
-
 
   private handleError(error: any) {
     console.error('An error occurred:', error);
