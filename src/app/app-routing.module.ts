@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: () => import('./anexos/anexos.module').then(m =>m.AnexosModule),
   },
   {
+    path: 'upgrade',
+    loadChildren: () => import('./upgradeinternet/upgradeinternet.module').then(m =>m.UpgradeinternetModule),
+  },
+  {
     path:'404',
     component: Error404PageComponent
   },

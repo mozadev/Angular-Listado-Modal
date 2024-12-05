@@ -1,1 +1,65 @@
-<p>upgradeinternet works!</p>
+<mat-card class="form-container">
+    <h1>Upgrade de Ancho de Banda de Internet</h1>
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+
+        <div class="section">
+            <h2 class="section-title">Credenciales</h2>
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>User Tacas</mat-label>
+                <input matInput formControlName="userTacas" placeholder="Ingrese User Tacas"> 
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" placeholder="Ingrese Password" type="password">
+            </mat-form-field>
+        </div>
+        <mat-divider></mat-divider>
+
+        <div class="section">
+            <h2 class="section-title">Configuración</h2>
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Commit PE</mat-label>
+                <input matInput formControlName="commitPE" placeholder="Ingrese Commit PE">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Acceso</mat-label>
+                <input matInput formControlName="ACCESO" placeholder="Ingrese Acceso">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>CPE</mat-label>
+                <input matInput formControlName="CPE" placeholder="Ingrese CPE">
+            </mat-form-field>
+        </div>
+            
+        <mat-divider></mat-divider>
+
+     
+
+        <div formArrayName="fields">
+            <div *ngFor="let group of fields.controls; let i = index" [formGroupName]="i" class="field-group">
+
+                <mat-form-field appearance="fill">
+                    <mat-label>CID</mat-label>
+                    <input matInput formControlName="cid" placeholder="CID">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Ancho de Banda</mat-label>
+                    <input matInput formControlName="bandwidth" placeholder="Ancho de Banda">
+                </mat-form-field>
+
+                <button mat-icon-button color="warn" (click)="removeField(i)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button mat-raised-button color="primary" type="button" (click)="addField()">Agregar</button>
+            <button mat-raised-button color="accent" type="submit">Enviar</button>
+        </div>
+    </form>
+</mat-card>
